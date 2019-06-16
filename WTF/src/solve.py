@@ -18,7 +18,7 @@ def Fill(arr, stack):
 
 import string
 
-for pic in range(40,51):
+for pic in range(51):
     arr = np.array(Image.open(f"./challenge_{pic}.png").convert("1").convert("L"))
     corner = [(size-3,size-3),(size-3,2),(2,size-3),(2,2)]
     for (x,y) in corner:
