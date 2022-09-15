@@ -1,0 +1,35 @@
+syntax = "proto2";
+
+package balsn;
+
+message Request {
+  required int32   module = 1;
+  required uint32  command = 2;
+  optional bytes data = 3;
+}
+
+message Auth{
+	optional string username=1;
+	optional string password=2;
+}
+
+message Control{
+	required int32 direction = 1;
+}
+
+message Info{
+	required int32 which = 1;
+	required int32 what = 2;
+}
+
+message Point{
+	required int32 x = 1;
+	required int32 y = 2;
+}
+
+message Response {
+	required int32 status = 1;
+	optional int32 iData = 2;
+	repeated Point pData = 3;
+	optional bytes bData = 4;
+}
